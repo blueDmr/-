@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    canvas{
+        border:1px solid black
+    }
+   </style>
+</head>
+<body>
+    <canvas width="500" height="600" id="canvas"></canvas>
+</body>
+<script>
+     const canvas = document.getElementById('canvas') //获取canvas元素
+     const ctx =canvas.getContext('2d')   //画笔
+    //  获取毛笔 canvas任何操作都是通过这个笔来完成
+     ctx.fillStyle='green'; //设置矩形颜色
+     ctx.fillRect(10,10,200,200) //绘画矩形 参数1 距左边框  参数2 距上边框  参数3 宽 参数4 高
+     ctx.clearRect(0,0,600,400)  //清屏
+
+
+
+    // 简介
+    // canvas html5新增语以化标签 默认的宽高是 300*150 浏览器默认是一张图片 相对来说就是img标签一样只是双标签 没有src和ilr属性
+    //  给canvas标签添加任何文本和子元素没有任何意义 canbas画布任何操作通过一个js{笔去完成：上下文context} canvas标签｜w\h 设置 不能通过样式 位置使用自身w/h和样式相对不同
+
+</script>
+</html>

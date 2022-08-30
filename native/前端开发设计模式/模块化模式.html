@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+  
+
+        //  前端模块化
+var Person = (function(){    
+var name = "xin";    
+var age = 22;    
+
+function getName(){        
+return name;
+    }  
+
+function getAge(){        
+return age;
+    }  
+    
+    
+return {        
+getName: getName,        
+getAge: getAge
+    }
+
+})();
+
+console.log(age); // 报错:age未定义
+
+console.log(name); // 报错:name未定义
+
+console.log(Person.age); // undefined
+
+console.log(Person.name); // undefined只能通过Person提供的接口访问相应的变量
+
+console.log(Person.getName()); // xin
+
+console.log(Person.getAge()); // 22
+    </script>
+</body>
+</html>

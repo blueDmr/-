@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      // 闭包三大特性  局部变量 内部嵌套 外部调用
+      // 函数依赖周围状态捆绑形成闭包
+      // 内部引用外部外部变量
+      // 延长代码结构生命周期
+      // 之前通过浏览器的打断点工具了解到内部其实是一个（非js的容器） 容器内部包含了被引用的变量
+
+      //外部函数被调用(注意,闭包出现于外层函数执行子函数变量提升的时候,而不是子函数被调用,甚至可能子函数不会被调用,但是在变量提升的时候已经有了闭包,当然,如果写的是var tmp=function(){}那必然在父函数开始的时候不产生闭包)
+
+    function fn (){
+      var arr = [];
+      for(var i = 0;i<5;i++){
+        arr[i]=function(){
+            return i 
+        }
+      }
+      return arr;
+    }
+    var list = fn()
+      for(var i = 0 ;sct= list.length,i<sct;i++){
+        console.log(list[i]())
+      }
+    console.log(list)
+    </script>
+</body>
+</html>

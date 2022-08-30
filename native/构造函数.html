@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //  要创建Person的新实例 必须使用new操作符
+        //  以这种方法 调用构造函数 实际会经历四个步骤
+        // 1.创建一个新对象
+        // 2.将构造函数的作用域赋给新对象（因此this就指向了这个新对象）
+        // 3.执行构造函数当中的代码（为新对象添加属性）
+        // 4.返回新对象
+
+        // this的理解
+        // 普通函数当中this=window
+        // 定时器当中this-window
+        // 构造函数当中 this-当前实例话的对象
+        // 事件函数处理函数中 this 事件触发的对象
+        // 在js当中一般理解就是谁调用这个this就指向谁
+
+
+            //  继承
+        //1.继承 继承拓展原型继承
+        // 构造函数通过new出来的实例也是一种继承  新对象继承构造函数的属性
+
+        // function Animal(name,color,say){
+        //     this.name=name,
+        //     this.color=color,
+        //     this.say= function(){
+        //         console.log('方法');
+        //     }
+        // }
+        // var cat =new Animal('cat','white');
+        // Animal.prototype.cry =function(){
+        //     console.log('123')
+        // }
+        // console.dir(Animal);
+        // console.log(cat);
+         
+       //2.继承  // 通过apply()和call实现继承
+        // apply() 方法调用一个具有给定this值的函数，以及以一个数组（或类数组对象）的形式提供的参数
+        // 注意：call()方法的作用和 apply() 方法类似，区别就是call()方法接受的是参数列表，而apply()方法接受的是一个参数数组。
+        // 语法：func.apply(thisArg, [argsArray])
+        // 继承语法
+        // function  person(name,age){
+        //     this.name=name;
+        //     this.age=age;
+        // }
+        // function man(name,age){
+        //     person.apply(this,[name,age]);
+        // }
+        // var Man =  new man('w',12)
+        // console.log(Man);
+            
+      //3.继承   // 组合call+prototype 最常用的一种方式 
+        //   function person(){
+        //     this.name=name;
+        //   } 
+        //   person.prototype.showName= function(){
+        //     return this.name;
+        //   }
+        //   function man(name,age){
+        //     person.call(this,name);
+        //     this.age=age;
+        //   }
+        //   man.prototype= new person();
+        //   man.prototype=showAge=function(){
+        //     return this.age;
+        //   }
+        //   var Man = new man ('123',12)
+        function fn (){
+
+        }
+       console.dir(fn)
+    </script>
+</body>
+</html>

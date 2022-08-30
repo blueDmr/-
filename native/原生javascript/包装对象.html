@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //   对象是 JavaScript 语言最主要的数据类型，
+    //   三种基本类型的值 数值/number、字符串/string、布尔值/boolean
+    //   在一定条件下，也会自动转为对象，也就是原始类型的“包装对象”（wrapper）。所谓“包装对象”，
+    //   指的是与数值、字符串、布尔值分别相对应的Number、String、Boolean三个原生对象。
+    //   这三个原生对象可以把基本类型的值变成（包装成）对象。
+
+
+        // 首先是使得“对象”这种类型可以覆盖 JavaScript 所有的值，整门语言有一个通用的数据模型，
+        // 其次是使得基本类型的值也有办法调用自己的方法
+        // 三个对象作为构造函数使用（带有new）时，可以将基本类型的值转为对象；
+        var a  = new Number('123')
+        console.log(typeof a) //object
+        console.log(a) //Number{123}
+    </script>
+</body>
+</html>

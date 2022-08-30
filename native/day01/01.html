@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="obj++">点击++</button>
+    <script>
+       let  obj= 0
+    //    object.defineProperty的数据劫持以及数据代理 
+    // 三个参数
+        //   1.目标对象object
+        //   2.目标对象当中的属性名 prop
+        //   3.对其定义或者修改的属性操作
+    Object.defineProperty(window,'obj',{
+        get(){
+           return  ++obj;
+        }, 
+        set(newavl,onval){
+         console.log(obj);
+        //  console.log(newavl)
+        //  console.log(onval)
+        }
+    })
+    // if(a > 0 && a > 1 && a > 2 ){
+    //       console.log(a);
+    //       console.log('object');
+    //       }
+    //  if(a === 1&& a===2 && a ===3){
+    //     console.log('222')
+    //  }
+    </script>
+</body>
+</html>
